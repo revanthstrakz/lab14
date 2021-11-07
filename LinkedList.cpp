@@ -18,19 +18,19 @@ void LinkedList::print() const {
 }
 
 LNode* LinkedList::find(int t) const {
-	LNode *temp = head_;
-	while(temp != nullptr) {
-		if (temp->data_ == t) return temp;
-		temp = temp->next_;
+	LNode *ba = head_;
+	while(ba != nullptr) {
+		if (ba->data_ == t) return ba;
+		ba = ba->next_;
 	}
 	return nullptr;
 }
 
 void LinkedList::insert_head(int t) {
-	LNode *temp = new LNode();
-	temp->data_ = t;
-	temp->next_	=head_;
-	head_=temp;
+	LNode *ba = new LNode();
+	ba->data_ = t;
+	ba->next_	=head_;
+	head_=ba;
 
 }
 
